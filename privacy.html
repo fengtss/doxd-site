@@ -1,73 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Doxd - Privacy Policy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the Doxd Discord bot.">
+  <title>Doxd Privacy Policy</title>
   <style>
-    body {
-      background: #0d0d0f;
-      color: #e8e8e8;
-      font-family: Arial, sans-serif;
-      max-width: 850px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-    }
-    h1, h2 { color: #fff; }
-    a { color: #aaa; }
+    :root { color-scheme: dark; --bg:#0d0d0f; --panel:#17171b; --text:#e8e8ec; --muted:#a6a6b0; --line:#2b2b33; --link:#91b7ff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    main { width:min(900px,calc(100% - 32px)); margin:40px auto; padding:clamp(24px,5vw,52px); background:var(--panel); border:1px solid var(--line); border-radius:16px; }
+    h1 { margin:0 0 4px; font-size:clamp(2rem,5vw,3rem); line-height:1.15; }
+    h2 { margin-top:2rem; font-size:1.3rem; }
+    p,li { max-width:76ch; }
+    a { color:var(--link); }
+    .updated { color:var(--muted); margin-top:0; }
+    .contact { padding:16px 20px; border:1px solid var(--line); border-radius:12px; }
+    code { padding:.1em .35em; background:#25252c; border-radius:5px; }
   </style>
 </head>
 <body>
+<main>
   <h1>Doxd Privacy Policy</h1>
-  <p>Last updated: October 7, 2026</p>
+  <p class="updated">Last updated: October 14, 2026</p>
 
-  <p>This Privacy Policy explains how Doxd processes information while providing its Discord bot features.</p>
+  <p>This policy explains how Doxd processes information while providing Discord bot features.</p>
 
-  <h2>1. Information Doxd May Process</h2>
-  <p>Depending on the features being used, Doxd may process information provided by Discord, including:</p>
+  <h2>1. Data Doxd processes</h2>
+  <p>Depending on the features used, Doxd may process Discord account, server, channel, role, message, attachment, reaction, voice-state, moderation, command-use, ticket, reminder, giveaway, XP, nickname and username history, birthday without birth year, timezone, highlight, Last.fm, Spotify, and configuration data. This can include Discord IDs, timestamps, usernames, display names, avatars, message text, message links, and moderator-provided reasons.</p>
+  <p>Optional integrations process only the identifiers, authorization records, and response caches needed for the requested integration. Doxd does not sell Discord API data.</p>
 
+  <h2>2. How data is used</h2>
+  <p>Doxd uses this information to provide server configuration, moderation and security enforcement, logging, tickets, reminders, music, utility commands, personalization, and explicitly enabled third-party integrations. Doxd does not use Discord API data for advertising or unrelated profiling.</p>
+
+  <h2>3. Retention</h2>
   <ul>
-    <li>Discord user IDs</li>
-    <li>Discord server IDs</li>
-    <li>Channel and role IDs</li>
-    <li>Usernames and display names</li>
-    <li>Server configuration and bot settings</li>
-    <li>Moderation records and command usage</li>
-    <li>Message content when required for commands, moderation, filters, automations, or other enabled features</li>
+    <li>Bounded in-memory snipes, edits, reactions, anti-spam windows, and request caches disappear on restart or when the relevant privacy deletion command runs.</li>
+    <li>Last.fm response cache entries are retained for no more than 7 days.</li>
+    <li>Reaction-message tracking entries are retained for no more than 3 days.</li>
+    <li>Completed privacy requests are retained for 90 days; pending requests remain until resolved.</li>
+    <li>Audit and name-history records are retained for no more than 365 days.</li>
+    <li>Rotated encrypted runtime logs and encrypted historical runtime-log archives are retained for no more than 30 days.</li>
+    <li>Active feature data is retained while required for that feature, until removed through its command, the privacy workflow, or server removal.</li>
+    <li>Database backups remain encrypted and are retained only long enough to keep tested recovery copies. A final backup-retention period will be published before cloud deployment.</li>
   </ul>
+  <p>Messages, attachments, and transcripts sent to a Discord channel remain subject to that server's Discord permissions and retention choices.</p>
 
-  <h2>2. How Information Is Used</h2>
-  <p>Information is processed only as necessary to operate Doxd, execute commands, provide moderation and automation features, maintain server settings, prevent abuse, diagnose errors, and improve reliability.</p>
+  <h2>4. Access, correction, and deletion</h2>
+  <p>Users can run the following commands:</p>
+  <ul>
+    <li><code>,privacy export</code> to receive a private JSON inventory by direct message.</li>
+    <li><code>,privacy correct (details)</code> to submit a correction request.</li>
+    <li><code>,privacy status</code> to review recorded requests.</li>
+    <li><code>,privacy delete DELETE MY DATA</code> to delete direct records, scrub references from shared records, remove linked-provider caches, and clear bounded in-memory records associated with the requesting Discord account.</li>
+  </ul>
+  <p>Exports redact access tokens, refresh tokens, client secrets, and other credentials. Prefix-command exports are never posted publicly.</p>
 
-  <h2>3. Data Storage</h2>
-  <p>Some information may be stored when necessary for persistent features such as server settings, moderation records, custom configurations, logging, or automated features.</p>
-
-  <p>Data that is no longer needed may be deleted or removed during routine maintenance.</p>
-
-  <h2>4. Message Content</h2>
-  <p>Doxd may access message content when required for features such as prefix commands, moderation filters, autoresponders, logging, or other message-based functionality.</p>
-
-  <p>Doxd does not sell message content or personal information.</p>
-
-  <h2>5. Sharing of Information</h2>
-  <p>Doxd does not sell personal information to advertisers or data brokers.</p>
-
-  <p>Information may be disclosed when required by law, necessary to protect the service, or necessary to investigate abuse or security incidents.</p>
+  <h2>5. Sharing and service providers</h2>
+  <p>Data is sent to Discord and a selected integration provider only when needed for the feature a user invokes. Hosting and infrastructure providers act as service providers for operating Doxd. Information may also be disclosed when required by law or needed to investigate abuse or a security incident.</p>
 
   <h2>6. Security</h2>
-  <p>Reasonable measures are used to protect stored information. However, no online service can guarantee complete security.</p>
+  <p>Doxd uses application-encrypted database storage, protected credentials, authenticated encrypted log and backup artifacts, restricted service access, and fail-closed startup checks. No online service can guarantee absolute security.</p>
 
-  <h2>7. Data Removal</h2>
-  <p>Server owners or users may request deletion of applicable stored data by contacting the Doxd developers.</p>
+  <h2>7. Incidents and policy changes</h2>
+  <p>The operator will investigate suspected unauthorized access, begin remediation, notify Discord and affected users when required, and preserve only the evidence needed for that response. Material changes to data collection, purpose, sharing, or retention will be reflected here.</p>
 
-  <h2>8. Third-Party Services</h2>
-  <p>Doxd operates through Discord and may rely on hosting, database, or infrastructure providers required to operate the service. Use of Discord is also subject to Discord's own privacy policies and terms.</p>
+  <h2>8. Contact</h2>
+  <div class="contact">
+    <div>Email: <a href="mailto:zukurski@gmail.com">zukurski@gmail.com</a></div>
+    <div>Discord: <a href="https://discord.gg/jailbird">discord.gg/jailbird</a></div>
+  </div>
 
-  <h2>9. Changes to This Policy</h2>
-  <p>This Privacy Policy may be updated as Doxd changes. The date at the top of this page will reflect the latest revision.</p>
-
-  <h2>10. Contact</h2>
-  <p>For privacy questions or data removal requests, contact: YOUR-EMAIL@example.com</p>
+  <p><a href="terms.html">Terms of Service</a></p>
+</main>
 </body>
 </html>
