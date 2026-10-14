@@ -42,7 +42,7 @@
     <li>Audit and name-history records are retained for no more than 365 days.</li>
     <li>Rotated encrypted runtime logs and encrypted historical runtime-log archives are retained for no more than 30 days.</li>
     <li>Active feature data is retained while required for that feature, until removed through its command, the privacy workflow, or server removal.</li>
-    <li>Database backups remain encrypted and are retained only long enough to keep tested recovery copies. A final backup-retention period will be published before cloud deployment.</li>
+    <li>Encrypted database backups are retained for no more than 30 days after a newer authenticated replacement exists. If no verified replacement exists, the newest recovery copy may remain beyond 30 days until a replacement passes authentication and recovery checks; the retention worker records this exception.</li>
   </ul>
   <p>Messages, attachments, and transcripts sent to a Discord channel remain subject to that server's Discord permissions and retention choices.</p>
 
